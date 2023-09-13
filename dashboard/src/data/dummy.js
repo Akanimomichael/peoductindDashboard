@@ -23,6 +23,8 @@ import product6 from './product6.jpg';
 import product7 from './product7.jpg';
 import product8 from './product8.jpg';
 
+// export {avatar, avatar2}
+
 export const gridOrderImage = (props) => (
   <div>
     <img
@@ -639,7 +641,6 @@ export const earningData = [
     title: 'Sales',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
-
     pcColor: 'green-600',
   },
   {
@@ -679,7 +680,6 @@ export const recentTransactions = [
     desc: 'Money reversed',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
-
     pcColor: 'green-600',
   },
   {
@@ -3083,11 +3083,11 @@ export const dropdownData = [
   },
 ];
 export const SparklineAreaData = [
-  { x: 1, yval: 2 },
-  { x: 2, yval: 6 },
-  { x: 3, yval: 8 },
-  { x: 4, yval: 5 },
-  { x: 5, yval: 10 },
+  { xval: 1, yval: 2 },
+  { xval: 2, yval: 6 },
+  { xval: 3, yval: 8 },
+  { xval: 4, yval: 5 },
+  { xval: 5, yval: 10 },
 
 ];
 
