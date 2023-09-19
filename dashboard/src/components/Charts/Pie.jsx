@@ -2,7 +2,7 @@ import React from 'react'
 
 function Pie() {
   return (
-    <div>Pie</div>
+    <div>Pies</div>
   )
 }
 
