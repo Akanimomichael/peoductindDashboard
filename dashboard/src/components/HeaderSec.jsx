@@ -2,10 +2,10 @@ import React from "react";
 import Button from "./Button";
 import { useStateContext } from "../contexts/contextsProvider";
 
-const Header = ({ category, title }) => {
+const HeaderSec = ({ category, title }) => {
   const { currentColor } = useStateContext();
   return (
-    <div className="md-10 flex ">
+    <div className="md-10 flex justify-between ">
       {" "}
       <div>
         <p className="text-gray-400">{category}</p>
@@ -13,8 +13,18 @@ const Header = ({ category, title }) => {
           {title}
         </p>
       </div>
+      <div>
+        {/* bgColor, color, size, text, borderRadius */}
+        <Button
+          color="white"
+          bgColor={currentColor}
+          text={`Add ${title}`}
+          borderRadius="20px"
+          size="sm"
+        />
+      </div>
     </div>
   );
 };
 
-export default Header;
+export default HeaderSec;

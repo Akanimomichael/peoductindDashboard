@@ -13,12 +13,12 @@ import {
 } from "@syncfusion/ej2-react-grids";
 
 import { customersData, customersGrid } from "../data/dummy";
-import { Header } from "../components";
+import HeaderSec from "../components/HeaderSec";
 
 const Customers = () => {
   return (
     <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
-      <Header category="Page" title="customers" />
+      <HeaderSec category="Page" title="Customers" />
 
       <GridComponent
         dataSource={customersData}

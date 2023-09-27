@@ -1,8 +1,9 @@
 import React from 'react'
+import Moudal from '../../components/moudal'
 
 const Pyramid = () => {
   return (
-    <div>Pyramid</div>
+    <Moudal />
   )
 }
 
