@@ -1,10 +1,8 @@
-import React from 'react'
-import Moudal from '../../components/moudal'
+import React from "react";
+import Modal from "../../components/Modal";
 
 const Pyramid = () => {
-  return (
-    <Moudal />
-  )
-}
+  return <Modal />;
+};
 
-export default Pyramid
+export default Pyramid;

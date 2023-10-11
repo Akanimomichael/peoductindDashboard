@@ -14,12 +14,15 @@ import {
 
 import { customersData, customersGrid } from "../data/dummy";
 import HeaderSec from "../components/HeaderSec";
+import { useStateContext } from "../contexts/contextsProvider";
+import Modal from "../components/Modal";
 
 const Customers = () => {
+  const {modalSettings} = useStateContext()
   return (
     <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
       <HeaderSec category="Page" title="Customers" />
-
+      {modalSettings && <Modal />}
       <GridComponent
         dataSource={customersData}
         allowPaging

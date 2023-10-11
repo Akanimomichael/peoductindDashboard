@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "./Button";
+import PageBtn from "./PageBtn";
 import { useStateContext } from "../contexts/contextsProvider";
 
-const HeaderSec = ({ category, title }) => {
-  const { currentColor } = useStateContext();
+const HeaderSec = ({ category, title, onClick }) => {
+  const { currentColor, setModalSettings } = useStateContext();
   return (
     <div className="md-10 flex justify-between ">
       {" "}
@@ -15,7 +15,7 @@ const HeaderSec = ({ category, title }) => {
       </div>
       <div>
         {/* bgColor, color, size, text, borderRadius */}
-        <Button
+        <PageBtn
           color="white"
           bgColor={currentColor}
           text={`Add ${title}`}

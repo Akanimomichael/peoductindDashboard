@@ -1,4 +1,7 @@
 import React from "react";
+
+import Modal from "../components/Modal";
+// import ThemeSettings from "../components";
 import {
   GridComponent,
   ColumnsDirective,
@@ -15,10 +18,14 @@ import {
 } from "@syncfusion/ej2-react-grids";
 import { ordersData, ordersGrid, contextMenuItems } from "../data/dummy";
 import HeaderSec from "../components/HeaderSec";
+import { useStateContext } from "../contexts/contextsProvider";
+
 
 const Orders = () => {
+  const { modalSettings } = useStateContext();
   return (
-    <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
+    <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl -z-0">
+      {modalSettings && <Modal />}
       <HeaderSec category="Page" title="Orders" />
 
       <GridComponent
@@ -26,10 +33,11 @@ const Orders = () => {
         dataSource={ordersData}
         allowPaging
         allowSorting
+        
       >
-        <ColumnsDirective>
+        <ColumnsDirective  >
           {ordersGrid.map((item, index) => (
-            <ColumnDirective key={index} {...item} />
+            <ColumnDirective key={index} {...item}  />
           ))}
         </ColumnsDirective>
         <Inject

@@ -560,44 +560,44 @@ export const links = [
       },
     ],
   },
-  {
-    title: "Charts",
-    links: [
-      {
-        name: "line",
-        icon: <AiOutlineStock />,
-      },
-      {
-        name: "area",
-        icon: <AiOutlineAreaChart />,
-      },
+  // {
+  //   title: "Charts",
+  //   links: [
+  //     {
+  //       name: "line",
+  //       icon: <AiOutlineStock />,
+  //     },
+  //     {
+  //       name: "area",
+  //       icon: <AiOutlineAreaChart />,
+  //     },
 
-      {
-        name: "bar",
-        icon: <AiOutlineBarChart />,
-      },
-      {
-        name: "pie",
-        icon: <FiPieChart />,
-      },
-      {
-        name: "financial",
-        icon: <RiStockLine />,
-      },
-      {
-        name: "color-mapping",
-        icon: <BsBarChart />,
-      },
-      {
-        name: "pyramid",
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: "stacked",
-        icon: <AiOutlineBarChart />,
-      },
-    ],
-  },
+  //     {
+  //       name: "bar",
+  //       icon: <AiOutlineBarChart />,
+  //     },
+  //     {
+  //       name: "pie",
+  //       icon: <FiPieChart />,
+  //     },
+  //     {
+  //       name: "financial",
+  //       icon: <RiStockLine />,
+  //     },
+  //     {
+  //       name: "color-mapping",
+  //       icon: <BsBarChart />,
+  //     },
+  //     {
+  //       name: "pyramid",
+  //       icon: <GiLouvrePyramid />,
+  //     },
+  //     {
+  //       name: "stacked",
+  //       icon: <AiOutlineBarChart />,
+  //     },
+  //   ],
+  // },
 ];
 
 export const cartData = [
@@ -662,7 +662,7 @@ export const earningData = [
     icon: <BsBoxSeam />,
     amount: "4,396",
     percentage: "+23%",
-    title: "Products",
+    title: "Monthly Sales",
     iconColor: "rgb(255, 244, 229)",
     iconBg: "rgb(254, 201, 15)",
     pcColor: "green-600",
@@ -671,20 +671,20 @@ export const earningData = [
     icon: <FiBarChart />,
     amount: "423,39",
     percentage: "+38%",
-    title: "Sales",
+    title: "Total Sales",
     iconColor: "rgb(228, 106, 118)",
     iconBg: "rgb(255, 244, 229)",
     pcColor: "green-600",
   },
-  {
-    icon: <HiOutlineRefresh />,
-    amount: "39,354",
-    percentage: "-12%",
-    title: "Refunds",
-    iconColor: "rgb(0, 194, 146)",
-    iconBg: "rgb(235, 250, 242)",
-    pcColor: "red-600",
-  },
+  // {
+  //   icon: <HiOutlineRefresh />,
+  //   amount: "39,354",
+  //   percentage: "-12%",
+  //   title: "Refunds",
+  //   iconColor: "rgb(0, 194, 146)",
+  //   iconBg: "rgb(235, 250, 242)",
+  //   pcColor: "red-600",
+  // },
 ];
 
 export const recentTransactions = [
@@ -2915,32 +2915,32 @@ export const scheduleData = [
 
 export const lineChartData = [
   [
-    { x: new Date(2005, 0, 1), y: 21 },
-    { x: new Date(2006, 0, 1), y: 24 },
-    { x: new Date(2007, 0, 1), y: 36 },
-    { x: new Date(2008, 0, 1), y: 38 },
-    { x: new Date(2009, 0, 1), y: 54 },
-    { x: new Date(2010, 0, 1), y: 57 },
-    { x: new Date(2011, 0, 1), y: 70 },
+    { x: new Date(2023, 1, 1), y: 21 },
+    { x: new Date(2023, 2, 1), y: 24 },
+    { x: new Date(2023, 3, 1), y: 36 },
+    { x: new Date(2023, 4, 1), y: 38 },
+    { x: new Date(2023, 5, 1), y: 44 },
+    { x: new Date(2023, 6, 1), y: 47 },
+    { x: new Date(2023, 7, 1), y: 41 },
   ],
   [
     { x: new Date(2005, 0, 1), y: 28 },
     { x: new Date(2006, 0, 1), y: 44 },
     { x: new Date(2007, 0, 1), y: 48 },
-    { x: new Date(2008, 0, 1), y: 50 },
+    { x: new Date(2008, 0, 1), y: 40 },
     { x: new Date(2009, 0, 1), y: 66 },
-    { x: new Date(2010, 0, 1), y: 78 },
-    { x: new Date(2011, 0, 1), y: 84 },
+    { x: new Date(2010, 0, 1), y: 50 },
+    { x: new Date(2011, 0, 1), y: 29 },
   ],
 
   [
-    { x: new Date(2005, 0, 1), y: 10 },
-    { x: new Date(2006, 0, 1), y: 20 },
-    { x: new Date(2007, 0, 1), y: 30 },
-    { x: new Date(2008, 0, 1), y: 39 },
-    { x: new Date(2009, 0, 1), y: 50 },
-    { x: new Date(2010, 0, 1), y: 70 },
-    { x: new Date(2011, 0, 1), y: 100 },
+    { x: new Date(2023, 1, 1), y: 30 },
+    { x: new Date(2023, 2, 1), y: 20 },
+    { x: new Date(2023, 3, 1), y: 30 },
+    { x: new Date(2023, 4, 1), y: 30 },
+    { x: new Date(2023, 5, 1), y: 50 },
+    { x: new Date(2023, 6, 1), y: 45 },
+    { x: new Date(2023, 7, 1), y: 40 },
   ],
 ];
 export const dropdownData = [
@@ -2970,27 +2970,27 @@ export const lineCustomSeries = [
     dataSource: lineChartData[0],
     xName: "x",
     yName: "y",
-    name: "Germany",
+    name: "Drinkable Yogurt",
     width: "2",
     marker: { visible: true, width: 10, height: 10 },
     type: "Line",
   },
 
-  {
-    dataSource: lineChartData[1],
-    xName: "x",
-    yName: "y",
-    name: "England",
-    width: "2",
-    marker: { visible: true, width: 10, height: 10 },
-    type: "Line",
-  },
+  // {
+  //   dataSource: lineChartData[1],
+  //   xName: "x",
+  //   yName: "y",
+  //   name: "England",
+  //   width: "2",
+  //   marker: { visible: true, width: 10, height: 10 },
+  //   type: "Line",
+  // },
 
   {
     dataSource: lineChartData[2],
     xName: "x",
     yName: "y",
-    name: "India",
+    name: "Greek Yogurt",
     width: "2",
     marker: { visible: true, width: 10, height: 10 },
     type: "Line",

@@ -3,12 +3,28 @@ import { BsCurrencyDollar } from "react-icons/bs";
 // import { GoPrimitiveDot } from "react-icons/go";
 import { GoProjectSymlink, GoProjectRoadmap } from "react-icons/go";
 import { Stacked, Pie, Button, SparkLine } from "../components";
+import LineChart from "../components";
+import {
+  ChartComponent,
+  SeriesCollectionDirective,
+  SeriesDirective,
+  Inject,
+  DateTime,
+  LineSeries,
+  Legend,
+  Tooltip,
+} from "@syncfusion/ej2-react-charts";
+
 import {
   earningData,
   SparklineAreaData,
   ecomPieChartData,
+  lineCustomSeries,
+  LinePrimaryXAxis,
+  LinePrimaryYAxis,
 } from "../data/dummy";
 import { ContextProvider, useStateContext } from "../contexts/contextsProvider";
+// import { Header } from "../../components";
 
 const Ecommerce = () => {
   const { currentColor } = useStateContext();
@@ -19,7 +35,7 @@ const Ecommerce = () => {
           <div className="flex justify-between items-center">
             <div>
               <p className="font-bold text-gray-400">Earnings</p>
-              <p className="text-2xl">$50,909,98</p>
+              <p className="text-2xl">NGA 50,909,98</p>
             </div>
           </div>
           <div className="mt-6">
@@ -79,7 +95,7 @@ const Ecommerce = () => {
             <div className="border-r-1 border-color m-4 pr-10">
               <div>
                 <p>
-                  <span className="text-3xl font-semibold">$93,438</span>
+                  <span className="text-3xl font-semibold">NGA 5,093,950</span>
                   <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-">
                     23%
                   </span>
@@ -88,12 +104,12 @@ const Ecommerce = () => {
               </div>
               <div className="mt-8">
                 <p>
-                  <span className="text-3xl font-semibold">$48,438</span>
+                  <span className="text-3xl font-semibold">NGA 1,948,400</span>
                 </p>
                 <p className="text-gray-500 mt-1">Expense</p>
               </div>
               <div className="mt-5  ">
-                <SparkLine
+                {/* <SparkLine
                   currentColor={currentColor}
                   id="line-sparkline"
                   type="Line"
@@ -101,7 +117,7 @@ const Ecommerce = () => {
                   width="250px"
                   data={SparklineAreaData}
                   color={currentColor}
-                />
+                /> */}
               </div>
               <div className="mt-10">
                 <Button
@@ -116,6 +132,34 @@ const Ecommerce = () => {
               <Stacked width="320px" height="360px" />
             </div>
           </div>
+        </div>
+      </div>
+      <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
+        <div className="md-10 flex ">
+          {" "}
+          <div>
+            {/* <p className="text-gray-400"></p> */}
+            <p className="text-3xl font-extrabold tracking-tight text-slate-900">
+              Sales Update
+            </p>
+          </div>
+        </div>
+        <div className="text-center mt-10">
+          <ChartComponent
+            id="line-chart"
+            height="420px"
+            primaryXAxis={LinePrimaryXAxis}
+            primaryYAxis={LinePrimaryYAxis}
+            tooltip={{ enable: true }}
+            chartArea={{ border: { width: 0 } }}
+          >
+            <Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
+            <SeriesCollectionDirective>
+              {lineCustomSeries.map((item, index) => (
+                <SeriesDirective key={index} {...item} />
+              ))}
+            </SeriesCollectionDirective>
+          </ChartComponent>
         </div>
       </div>
     </div>

@@ -1,9 +1,82 @@
-import React from 'react'
+import React from "react";
+import { MdOutlineCancel } from "react-icons/md";
+import { avatar } from "../data/avater";
+import Button from "./Button";
+import { ContextProvider, useStateContext } from "../contexts/contextsProvider";
 
 const UserProfile = () => {
+  const { currentColor, setIsClicked } = useStateContext();
   return (
-    <div>UserProfile</div>
-  )
-}
+    <div
+      className="bg-white  border-gray-200 border-opacity-50  overflow-hidden border-[2px] absolute  w-[400px] top-[100%] right-2 rounded-lg "
+      style={{ zIndex: "1000" }}
+    >
+      <div className="flex justify-between items-center p-4 ml-4">
+        <p className="font-semibold text-xl">User Profile</p>{" "}
+        <button
+          type="button"
+          onClick={() => {
+            setIsClicked(false);
+            // console.log("no");
+          }}
+          style={{ color: "rgb(153, 171, 180)", borderRadius: "50%" }}
+          className="text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray"
+        >
+          <MdOutlineCancel />
+        </button>{" "}
+      </div>
+      <div className="flex  items-center p-4 mx-4 border-b-2 ">
+        <div className=" w-[30%]">
+          <img src={avatar} alt="avater" className="w-16 h-16 rounded-full" />
+        </div>
+        <div className=" ml-2 w-[70%]">
+          <p className="text-gray-400 font-bold ml-1 text-15">
+            Akanimo Michael
+          </p>
+          <p className="text-gray-400 text-14">CEO</p>
+          <p className="text-gray-400 text-14 overflow-wrap break-words ">
+            akanimommichael@gmail.com
+          </p>
+        </div>
+      </div>
+      <div className="flex  items-center p-4 mx-4 border-b-2 ">
+        <div className="pr-4">
+          <img src={avatar} alt="avater" className="w-12 h-12 rounded-[10px]" />
+        </div>
+        <div>
+          <p className="text-gray-400 font-bold ml-1 text-15">My Profile</p>
+          <p className="text-gray-400 text-14">Account Settings</p>
+        </div>
+      </div>
+      <div className="flex  items-center p-4 mx-4 border-b-2 ">
+        <div className="pr-4">
+          <img src={avatar} alt="avater" className="w-12 h-12 rounded-[10px]" />
+        </div>
+        <div>
+          <p className="text-gray-400 font-bold ml-1 text-15">My Inbox</p>
+          <p className="text-gray-400 text-14">Messages & Emails</p>
+        </div>
+      </div>
+      <div className="flex  items-center p-4 mx-4 border-b-2 ">
+        <div className="pr-4">
+          <img src={avatar} alt="avater" className="w-12 h-12 rounded-[10px]" />
+        </div>
+        <div>
+          <p className="text-gray-400 font-bold ml-1 text-15">My Tasks</p>
+          <p className="text-gray-400 text-14">To-do and Daily Task</p>
+        </div>
+      </div>
+      <div className="mt-10 items-center p-4 ">
+        <Button
+          color="white"
+          bgColor={currentColor}
+          text="Logout"
+          borderRadius="10px"
+          width="100%"
+        />
+      </div>
+    </div>
+  );
+};
 
-export default UserProfile
+export default UserProfile;

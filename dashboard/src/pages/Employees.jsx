@@ -9,12 +9,15 @@ import {
 } from "@syncfusion/ej2-react-grids";
 import { employeesData, employeesGrid } from "../data/dummy";
 import HeaderSec from "../components/HeaderSec";
+import { useStateContext } from "../contexts/contextsProvider";
+import Modal from "../components/Modal";
 
 const Employees = () => {
+  const { modalSettings } = useStateContext();
   return (
     <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
       <HeaderSec category="Page" title="Employees" />
-
+      {modalSettings && <Modal />}
       <GridComponent
         dataSource={employeesData}
         allowPaging
