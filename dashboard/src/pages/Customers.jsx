@@ -20,7 +20,7 @@ import Modal from "../components/Modal";
 const Customers = () => {
   const {modalSettings} = useStateContext()
   return (
-    <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
+    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
       <HeaderSec category="Page" title="Customers" />
       {modalSettings && <Modal />}
       <GridComponent
@@ -29,7 +29,7 @@ const Customers = () => {
         allowSorting
         width="auto"
         toolbar={["Delete"]}
-        editSettings={{allowDeleting: true, allowEditing: true}}
+        editSettings={{ allowDeleting: true, allowEditing: true }}
       >
         <ColumnsDirective>
           {customersGrid.map((item, index) => (

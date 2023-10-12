@@ -19,12 +19,12 @@ import {
 import { ordersData, ordersGrid, contextMenuItems } from "../data/dummy";
 import HeaderSec from "../components/HeaderSec";
 import { useStateContext } from "../contexts/contextsProvider";
-
+// m-2 md:m-10 mt-24
 
 const Orders = () => {
   const { modalSettings } = useStateContext();
   return (
-    <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl -z-0">
+    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl -z-0">
       {modalSettings && <Modal />}
       <HeaderSec category="Page" title="Orders" />
 
@@ -33,11 +33,10 @@ const Orders = () => {
         dataSource={ordersData}
         allowPaging
         allowSorting
-        
       >
-        <ColumnsDirective  >
+        <ColumnsDirective>
           {ordersGrid.map((item, index) => (
-            <ColumnDirective key={index} {...item}  />
+            <ColumnDirective key={index} {...item} />
           ))}
         </ColumnsDirective>
         <Inject
