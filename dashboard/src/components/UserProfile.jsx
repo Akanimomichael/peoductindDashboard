@@ -1,6 +1,6 @@
 import React from "react";
 import { MdOutlineCancel } from "react-icons/md";
-import { avatar } from "../data/avater";
+import { akanimopics } from "../data/avater";
 import Button from "./Button";
 import { BsBoxSeam } from "react-icons/bs";
 import { FiSettings, FiBarChart } from "react-icons/fi";
@@ -29,7 +29,11 @@ const UserProfile = () => {
       </div>
       <div className="flex  items-center p-4 mx-4 border-b-2 ">
         <div className=" w-[30%]">
-          <img src={avatar} alt="avater" className="w-16 h-16 rounded-full" />
+          <img
+            src={akanimopics}
+            alt="avater"
+            className="w-16 h-16 rounded-full"
+          />
         </div>
         <div className=" ml-2 w-[70%]">
           <p className="text-gray-400 font-bold ml-1 text-15">
