@@ -9,19 +9,30 @@ const HeaderSec = ({ category, title, onClick }) => {
       {" "}
       <div>
         <p className="text-gray-400">{category}</p>
-        <p className="text-3xl font-extrabold tracking-tight text-slate-900">
+        <p className="sm:text-3xl text-3sm font-extrabold tracking-tight text-slate-900">
           {title}
         </p>
       </div>
-      <div>
+      <div className=" sm:flex block">
         {/* bgColor, color, size, text, borderRadius */}
-        <PageBtn
-          color="white"
-          bgColor={currentColor}
-          text={`Add ${title}`}
-          borderRadius="20px"
-          size="sm"
-        />
+        <div className="p-2">
+          <PageBtn
+            color="white"
+            bgColor={currentColor}
+            text={`Add ${title}`}
+            borderRadius="20px"
+            size="sm"
+          />
+        </div>
+        <div className="p-2">
+          <PageBtn
+            color="white"
+            bgColor={currentColor}
+            text={`Remove ${title}`}
+            borderRadius="20px"
+            size="sm"
+          />
+        </div>
       </div>
     </div>
   );

@@ -21,7 +21,14 @@ import {
   ColorMapping,
   Editor,
   Line,
+  RawMaterials
 } from "./pages";
+
+
+
+// import RawMaterials from "./pages/input/raw materials/RawMaterials";
+// import {SupplierDetails , RawMaterials} from "./pages/Charts/input/raw materials";
+// import RawMaterials from "./pages/Charts/input/raw materials";
 import "./App.css";
 import { useStateContext } from "./contexts/contextsProvider";
 
@@ -86,6 +93,9 @@ const App = () => {
                 <Route path="/editor" element={<Editor />} />
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/color-picker" element={<ColorPicker />} />
+
+                {/* INPUT*/}
+                <Route path="/raw materials" element={<RawMaterials />} />
 
                 {/* CHART */}
                 <Route path="/line" element={<Line />} />
